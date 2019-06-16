@@ -11,3 +11,9 @@ eureka-client/target/
 eureka-server/target/
 service-ribbon/target/
 target/
+.gitignore
+.mvn/
+mvnw
+mvnw.cmd
+pom.xml
+src/
