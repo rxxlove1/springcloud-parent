@@ -6,7 +6,7 @@
         <groupId>com.xx</groupId>
         <artifactId>springcloud-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>service-ribbon</artifactId>
