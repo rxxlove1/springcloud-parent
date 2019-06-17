@@ -10,6 +10,7 @@
  */
 package com.xx.servicefeign.service;
 
+import com.xx.servicefeign.service.impl.HiServiceImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,7 +23,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @create 2019/6/16 0016
  * @since 1.0.0
  */
-@FeignClient("service-eureka1")
+@FeignClient(value = "service-eureka1",fallback = HiServiceImpl.class)
 public interface HiService {
 
     @GetMapping("/hi")
