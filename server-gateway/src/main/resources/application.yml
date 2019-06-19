@@ -3,7 +3,21 @@ server:
 
 spring:
   profiles:
-    active: rewritepath_route
+    active: request_time_route
+---
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: request_time_route
+          uri: http://httpbin.org:80/get
+          predicates:
+            - After=2017-01-20T17:42:47.789-07:00[America/Denver]
+          filters:
+            - RequestTime=false
+  profiles: request_time_route
+
+
 ---
 spring:
   cloud:
