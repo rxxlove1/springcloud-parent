@@ -34,13 +34,18 @@ public class RoutesConfig {
     //public Mono<String> fallback() {
     //    return Mono.just("fallback");
     //}
-    @Bean
-    public RequestTimeGatewayFilterFactory requestTimeGatewayFilterFactory(){
-        return  new RequestTimeGatewayFilterFactory();
-    }
+    //@Bean
+    //public RequestTimeGatewayFilterFactory requestTimeGatewayFilterFactory(){
+    //    return  new RequestTimeGatewayFilterFactory();
+    //}
+    //
+    //@Bean
+    //public TokenGlobalFilter tokenGlobalFilter(){
+    //    return  new TokenGlobalFilter();
+    //}
 
     @Bean
-    public TokenGlobalFilter tokenGlobalFilter(){
-        return  new TokenGlobalFilter();
+    public HostAddrKeyResolver hostAddrKeyResolver() {
+        return new HostAddrKeyResolver();
     }
 }
