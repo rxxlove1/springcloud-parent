@@ -25,6 +25,8 @@
         <module>service-ribbon</module>
         <module>service-feign</module>
         <module>server-gateway</module>
+        <module>api</module>
+        <module>server</module>
     </modules>
 
     <properties>

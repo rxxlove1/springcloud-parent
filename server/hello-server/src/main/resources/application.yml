@@ -1,0 +1,14 @@
+server:
+  port: 8800
+
+spring:
+  application:
+    name: hello-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 20
+    lease-expiration-duration-in-seconds: 10
